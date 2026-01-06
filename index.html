@@ -262,15 +262,15 @@ function calendar(widget, data)
     {
         var fila = document.createElement('tr');
 
-		// shift date by +1 to match sunday first
+		
         for(var d = 1; d < 8; d++)
         {
 	    var cela = document.createElement('td');
 	    var span = document.createElement('span');
 
 	    cela.appendChild(span);
-
-            span.innerHTML = actual.getDate();
+// shift date by +1 to match sunday first
+            span.innerHTML = actual.getDate() -1;
 
             if(actual.getMonth() !== data.getMonth())
                 cela.className = 'fora';
