@@ -270,7 +270,7 @@ function calendar(widget, data)
 
 	    cela.appendChild(span);
 // shift date by +1 to match sunday first
-            span.innerHTML = actual.getDate() -1;
+            span.innerHTML = actual.getDate();
 
             if(actual.getMonth() !== data.getMonth())
                 cela.className = 'fora';
