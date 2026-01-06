@@ -241,8 +241,13 @@ function calendar(widget, data)
     // fila.innerHTML += '<th class="day-header">' + days_abr[0] + '</th>';
     e.appendChild(fila);
 
-    /* Obtinc el dia que va acabar el mes anterior */
+    /* Obten el dia que va acabar el mes anterior */
+	/* 
+	Changed format to SUNDAY first 
 	
+	INDEX 0 = LAST DAY OF THE MONTH BC DAY VALUE IS 1-INDEXED
+	data holds data of PREVIOUS month	
+	*/
     var inici_mes =
         new Date(data.getFullYear(), data.getMonth(), 0).getDay();
 
@@ -253,7 +258,7 @@ function calendar(widget, data)
 
 	console.log(inici_mes);
 	console.log(actual);
-
+	console.log(data);
 	
     /* 6 setmanes per cobrir totes les posiblitats
      *  Quedaria mes consistent alhora de mostrar molts mesos 
@@ -269,7 +274,7 @@ function calendar(widget, data)
 	    var span = document.createElement('span');
 
 	    cela.appendChild(span);
-// shift date by +1 to match sunday first
+
             span.innerHTML = actual.getDate();
 
             if(actual.getMonth() !== data.getMonth())
