@@ -242,13 +242,19 @@ function calendar(widget, data)
     e.appendChild(fila);
 
     /* Obtinc el dia que va acabar el mes anterior */
+	
     var inici_mes =
         new Date(data.getFullYear(), data.getMonth(), -1).getDay();
 
+	
     var actual = new Date(data.getFullYear(),
 			  data.getMonth(),
 			  -inici_mes);
 
+	console.log(actual, "actual");
+	console.log(inici_mes,"inici_mes");
+
+	
     /* 6 setmanes per cobrir totes les posiblitats
      *  Quedaria mes consistent alhora de mostrar molts mesos 
      *  en una quadricula */
@@ -256,6 +262,7 @@ function calendar(widget, data)
     {
         var fila = document.createElement('tr');
 
+		// shift date by +1 to match sunday first
         for(var d = 1; d < 8; d++)
         {
 	    var cela = document.createElement('td');
