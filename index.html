@@ -232,7 +232,8 @@ function calendar(widget, data)
 
     fila = document.createElement('tr');
 
-    for(var i = 1; i < 7; i++)
+    // for(var i = 1; i < 7; i++)
+	for (var i = 0; i < 7; i++)
     {
         fila.innerHTML += '<th class="day-header">' + days_abr[i] + '</th>';
     }
