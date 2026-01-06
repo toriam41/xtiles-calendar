@@ -64,9 +64,6 @@ td,th {
 }
 th {
     padding: 10px;
-    /* background-color: #000000;
-    color: #fff; */
-    /* font-weight: normal; */
 }
 
 
@@ -232,22 +229,23 @@ function calendar(widget, data)
 
     fila = document.createElement('tr');
 
-    // for(var i = 1; i < 7; i++)
+
 	for (var i = 0; i < 7; i++)
     {
         fila.innerHTML += '<th class="day-header">' + days_abr[i] + '</th>';
     }
 
-    // fila.innerHTML += '<th class="day-header">' + days_abr[0] + '</th>';
+
     e.appendChild(fila);
 
     /* Obten el dia que va acabar el mes anterior */
+	
 	/* 
 	Changed format to SUNDAY first 
 	
 	INDEX 0 = LAST DAY OF THE MONTH BC DAY VALUE IS 1-INDEXED
-	data holds data of PREVIOUS month	
 	*/
+	
     var inici_mes =
         new Date(data.getFullYear(), data.getMonth(), 0).getDay();
 
@@ -281,6 +279,8 @@ function calendar(widget, data)
                 cela.className = 'fora';
 
             /* Si es avui el decorem */
+
+			// NEED TO COMPARE AGAINST TODAY'S STATIC DATE
             if(data.getDate() == actual.getDate() && data.getMonth() == actual.getMonth())
 		            cela.className = 'avui';
 
