@@ -8,7 +8,6 @@
 
     <style>
 
-  /* SAME COLORS FOR (HEADER, ARROWS, DAILY SQUARE) #607F60 (DAY HEADER TEXT, DATE NUMBERS, TABLE BORDER) #385738 AND LIGHT COLOR FOR DAY HEADER BKG #D0DCD0*/
 body {
     font-family: monospace;
 }
@@ -33,13 +32,10 @@ table {
     table-layout: fixed;
     position: absolute;
     background-color: #fff;
-    border: 2px solid #385738;
-    box-shadow: 2px 2px 1px 0px #385738;
 }
 
 /* CHANGE CALENDAR HEADER COLOR HERE */
 .month {
-    background-color: #607F60;
     color: #fff;
     font-size: 1.5em;
 }
@@ -53,8 +49,6 @@ table {
 
 /* CHANGE DAY HEADER BACKGROUND AND TEXT COLOR HERE */
 .day-header{
-    background-color: #D0DCD0;
-    color: #385738;
 }
 
 td,th {
@@ -72,7 +66,6 @@ td {
 
 /* CHANGE DATE NUMBER COLOR HERE */
 td>span {
-    color: #385738;
     font-weight: bold;
     padding: 10px;
     display: block;
@@ -83,7 +76,6 @@ td>span {
 /* CHANGE DAILY SQUARE COLOR HERE */
 td.avui>span {
     font-weight: bold;
-    background-color: #607F60;
     color: #fff;
 }
 td.fora > span {
@@ -92,7 +84,6 @@ td.fora > span {
 
 /* CHANGE ARROW BUTTON COLOR HERE */
 .boto-next, .boto-prev {
-    background: #607F60;
     color: #fff;
     font-family: inherit;
     border: none;
